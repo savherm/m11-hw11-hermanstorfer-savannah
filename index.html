@@ -11,29 +11,78 @@
     rel="stylesheet">
 
   <style>
+    :root {
+      --sage: #B4C7B0;
+      --beige: #F5EFE6;
+    }
+
     body {
       font-family: Arial, sans-serif;
+      background-color: var(--beige);
     }
+
+    .navbar {
+      background-color: var(--sage) !important;
+    }
+
+    .navbar-brand,
+    .nav-link {
+      color: #2d2d2d !important;
+      font-weight: 600;
+    }
+
     .hero {
-      background-color: #f8f9fa;
+      background-color: var(--beige);
       padding: 80px 0;
+    }
+
+    .btn-primary {
+      background-color: var(--sage);
+      border-color: var(--sage);
+      color: #2d2d2d;
+      font-weight: 600;
+    }
+
+    .btn-primary:hover {
+      background-color: #9bb99a;
+      border-color: #9bb99a;
+    }
+
+    .card {
+      border: none;
+      border-radius: 12px;
+    }
+
+    .card-body {
+      background-color: white;
+    }
+
+    #hobbies {
+      background-color: var(--sage);
+    }
+
+    #goals .btn-outline-dark {
+      border-color: var(--sage);
+      color: var(--sage);
+    }
+
+    #goals .btn-outline-dark:hover {
+      background-color: var(--sage);
+      color: white;
     }
   </style>
 </head>
 
 <body>
 
-  <!-- NAVBAR (Bootstrap Component 1) -->
-  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <!-- NAVBAR -->
+  <nav class="navbar navbar-expand-lg">
     <div class="container">
       <a class="navbar-brand" href="#">Savannah Wilson</a>
 
       <button class="navbar-toggler" type="button"
         data-bs-toggle="collapse"
-        data-bs-target="#navbarNav"
-        aria-controls="navbarNav"
-        aria-expanded="false"
-        aria-label="Toggle navigation">
+        data-bs-target="#navbarNav">
           <span class="navbar-toggler-icon"></span>
       </button>
 
@@ -58,7 +107,7 @@
     </div>
   </section>
 
-  <!-- ABOUT ME SECTION (Responsive Grid) -->
+  <!-- ABOUT ME SECTION -->
   <div class="container my-5">
     <div class="row align-items-center">
 
@@ -67,13 +116,13 @@
         <h2 class="fw-bold mb-3">About Me</h2>
         <p>
           Hi! I'm Savannah — a creative, ambitious, and family-oriented digital strategy student 
-          at the University of Florida. I'm also a mom to a sweet toddler who keeps life 
-          exciting, messy, and full of purpose.
+          at the University of Florida. I'm also a mom to a sweet toddler who keeps life exciting, 
+          messy, and full of purpose.
         </p>
         <p>
-          I run a photography business where I capture families, couples, maternity, and 
-          lifestyle moments. Photography lets me blend creativity with emotion and serve my 
-          community in a meaningful way.
+          I run a photography business where I capture families, couples, maternity, and lifestyle 
+          moments. Photography lets me blend creativity with emotion and serve my community in a 
+          meaningful way.
         </p>
         <p>
           When I’m not working or studying, you can find me watching reality TV, reading a good 
@@ -82,13 +131,13 @@
         </p>
       </div>
 
-      <!-- RIGHT COLUMN - CARD (Bootstrap Component 2) -->
+      <!-- RIGHT COLUMN - CARD -->
       <div class="col-12 col-md-6 mt-4 mt-md-0">
         <div class="card shadow">
           <img 
-            src="https://images.unsplash.com/photo-1529626455594-4ff0802cfb7e"
+            src="kimberli_SavvyLensPhotos-21.jpg"
             class="card-img-top"
-            alt="Photography">
+            alt="Savvy Lens Photography Sample">
           <div class="card-body">
             <h5 class="card-title fw-bold">My Photography Business</h5>
             <p class="card-text">
@@ -103,47 +152,43 @@
     </div>
   </div>
 
-  <!-- HOBBIES SECTION (Grid + Cards) -->
-  <section id="hobbies" class="bg-light py-5">
+  <!-- HOBBIES SECTION -->
+  <section id="hobbies" class="py-5">
     <div class="container">
-      <h2 class="fw-bold text-center mb-4">My Hobbies & Interests</h2>
+      <h2 class="fw-bold text-center mb-4 text-dark">My Hobbies & Interests</h2>
 
       <div class="row g-4">
 
-        <!-- HOBBY 1 -->
         <div class="col-12 col-md-4">
           <div class="card h-100 shadow-sm">
             <div class="card-body">
               <h5 class="card-title fw-bold">Being a Mom</h5>
               <p class="card-text">
                 Motherhood is my biggest source of motivation. I love watching my son grow, learn, 
-                and explore the world. Being a mom is the heart of my life and shapes my goals.
+                and explore the world.
               </p>
             </div>
           </div>
         </div>
 
-        <!-- HOBBY 2 -->
         <div class="col-12 col-md-4">
           <div class="card h-100 shadow-sm">
             <div class="card-body">
               <h5 class="card-title fw-bold">Reality TV</h5>
               <p class="card-text">
-                From Bravo to Netflix, I love reality TV. It's my escape, my background noise, 
-                and sometimes my source of inspiration for content and storytelling.
+                From Bravo to Netflix, I love reality TV. It’s my escape and sometimes my source of 
+                storytelling inspiration.
               </p>
             </div>
           </div>
         </div>
 
-        <!-- HOBBY 3 -->
         <div class="col-12 col-md-4">
           <div class="card h-100 shadow-sm">
             <div class="card-body">
               <h5 class="card-title fw-bold">Reading</h5>
               <p class="card-text">
-                I love reading books about self-growth, business, motherhood, and occasionally a 
-                fun fiction novel. Reading helps me reset and recharge.
+                I love books on self-growth, business, motherhood, and a good fiction story to unwind.
               </p>
             </div>
           </div>
@@ -162,8 +207,7 @@
         <div class="col-12 col-md-8">
           <p class="text-center fs-5">
             My long-term goal is to work in digital marketing or UX strategy, where I can create 
-            meaningful, user-centered digital experiences. I want to combine data, creativity, 
-            and storytelling to help brands communicate authentically and effectively.
+            meaningful, user-centered experiences that merge data, creativity, and storytelling.
           </p>
         </div>
       </div>
@@ -174,7 +218,6 @@
     </div>
   </section>
 
-  <!-- Bootstrap JS -->
   <script 
     src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js">
   </script>
