@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>About Me - Bootstrap Assignment</title>
 
-  <!-- Google Font for Headers -->
+  <!-- Google Font for Headers & Nav -->
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600;700&display=swap" rel="stylesheet">
 
   <!-- Bootstrap CSS -->
@@ -33,10 +33,13 @@
     .navbar {
       background-color: var(--sage) !important;
     }
+
     .navbar-brand,
     .nav-link {
+      font-family: 'Cormorant Garamond', serif;
       color: var(--dark) !important;
       font-weight: 600;
+      letter-spacing: 0.03em;
     }
 
     /* HERO SECTION WITH ROUNDED SHAPES */
@@ -85,7 +88,7 @@
       border-color: #9bb99a;
     }
 
-    /* CARD OVERRIDES */
+    /* CARDS */
     .card {
       border: none;
       border-radius: 14px;
@@ -141,14 +144,14 @@
   </section>
 
   <!-- ABOUT ME SECTION -->
-  <div class="container my-5">
+  <div class="container my-5 mb-5">
     <div class="row align-items-center">
 
       <!-- LEFT COLUMN -->
       <div class="col-12 col-md-6">
         <h2 class="fw-bold mb-3">About Me</h2>
         <p>
-          Hi! I'm Savannah. I am a creative, ambitious, and family-oriented digital strategy student 
+          Hi! I'm Savannah. I'm a creative, ambitious, and family-oriented digital strategy student 
           at the University of Florida. I'm also a mom to a sweet toddler who keeps life exciting, 
           messy, and full of purpose.
         </p>
@@ -163,25 +166,27 @@
         </p>
       </div>
 
-      <!-- RIGHT COLUMN (CARD with your image) -->
-<div class="col-12 col-md-6 mt-4 mt-md-0 d-flex justify-content-center">
-  <div class="card shadow" style="max-width: 380px; border-radius: 16px;">
-    <img 
-      src="kimberli_SavvyLensPhotos-21.jpg"
-      class="card-img-top"
-      alt="Savvy Lens Photography Sample"
-      style="border-radius: 16px; max-height: 430px; object-fit: cover;">
-    <div class="card-body">
-      <h5 class="card-title fw-bold">My Photography Business</h5>
-      <p class="card-text">
-        I specialize in lifestyle and family photography, capturing real and emotional 
-        moments that tell a story. My goal is to make people feel confident, comfortable, 
-        and seen.
-      </p>
+      <!-- RIGHT COLUMN (smaller CARD with image) -->
+      <div class="col-12 col-md-6 mt-4 mt-md-0 d-flex justify-content-center">
+        <div class="card shadow" style="max-width: 380px; border-radius: 16px;">
+          <img 
+            src="kimberli_SavvyLensPhotos-21.jpg"
+            class="card-img-top"
+            alt="Savvy Lens Photography Sample"
+            style="border-radius: 16px; max-height: 430px; object-fit: cover;">
+          <div class="card-body">
+            <h5 class="card-title fw-bold">My Photography Business</h5>
+            <p class="card-text">
+              I specialize in lifestyle and family photography, capturing real and emotional 
+              moments that tell a story. My goal is to make people feel confident, comfortable, 
+              and seen.
+            </p>
+          </div>
+        </div>
+      </div>
+
     </div>
   </div>
-</div>
-
 
   <!-- HOBBIES SECTION -->
   <section id="hobbies" class="py-5">
