@@ -5,6 +5,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>About Me - Bootstrap Assignment</title>
 
+  <!-- Google Font for Headers -->
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600;700&display=swap" rel="stylesheet">
+
   <!-- Bootstrap CSS -->
   <link
     href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css"
@@ -14,6 +17,7 @@
     :root {
       --sage: #B4C7B0;
       --beige: #F5EFE6;
+      --dark: #2d2d2d;
     }
 
     body {
@@ -21,40 +25,70 @@
       background-color: var(--beige);
     }
 
+    h1, h2, h3, h4, h5 {
+      font-family: 'Cormorant Garamond', serif;
+    }
+
+    /* NAVBAR */
     .navbar {
       background-color: var(--sage) !important;
     }
-
     .navbar-brand,
     .nav-link {
-      color: #2d2d2d !important;
+      color: var(--dark) !important;
       font-weight: 600;
     }
 
+    /* HERO SECTION WITH ROUNDED SHAPES */
     .hero {
       background-color: var(--beige);
-      padding: 80px 0;
+      padding: 100px 0;
+      position: relative;
+      overflow: hidden;
     }
 
+    .hero::before,
+    .hero::after {
+      content: "";
+      position: absolute;
+      background: var(--sage);
+      opacity: 0.35;
+      border-radius: 50%;
+      z-index: -1;
+    }
+
+    /* Big shape left */
+    .hero::before {
+      width: 420px;
+      height: 420px;
+      top: -60px;
+      left: -120px;
+    }
+
+    /* Small shape right */
+    .hero::after {
+      width: 260px;
+      height: 260px;
+      bottom: -40px;
+      right: -60px;
+    }
+
+    /* BUTTONS */
     .btn-primary {
       background-color: var(--sage);
       border-color: var(--sage);
-      color: #2d2d2d;
+      color: var(--dark);
       font-weight: 600;
     }
-
     .btn-primary:hover {
       background-color: #9bb99a;
       border-color: #9bb99a;
     }
 
+    /* CARD OVERRIDES */
     .card {
       border: none;
-      border-radius: 12px;
-    }
-
-    .card-body {
-      background-color: white;
+      border-radius: 14px;
     }
 
     #hobbies {
@@ -65,7 +99,6 @@
       border-color: var(--sage);
       color: var(--sage);
     }
-
     #goals .btn-outline-dark:hover {
       background-color: var(--sage);
       color: white;
@@ -115,7 +148,7 @@
       <div class="col-12 col-md-6">
         <h2 class="fw-bold mb-3">About Me</h2>
         <p>
-          Hi! I'm Savannah — a creative, ambitious, and family-oriented digital strategy student 
+          Hi! I'm Savannah. I am a creative, ambitious, and family-oriented digital strategy student 
           at the University of Florida. I'm also a mom to a sweet toddler who keeps life exciting, 
           messy, and full of purpose.
         </p>
@@ -126,31 +159,29 @@
         </p>
         <p>
           When I’m not working or studying, you can find me watching reality TV, reading a good 
-          book, or enjoying time with my son. I love storytelling in every form, whether 
-          through photos, writing, or the wild drama on Bravo.
+          book, or enjoying time with my son.
         </p>
       </div>
 
-      <!-- RIGHT COLUMN - CARD -->
-      <div class="col-12 col-md-6 mt-4 mt-md-0">
-        <div class="card shadow">
-          <img 
-            src="kimberli_SavvyLensPhotos-21.jpg"
-            class="card-img-top"
-            alt="Savvy Lens Photography Sample">
-          <div class="card-body">
-            <h5 class="card-title fw-bold">My Photography Business</h5>
-            <p class="card-text">
-              I specialize in lifestyle and family photography, capturing real and emotional 
-              moments that tell a story. My goal is to make people feel confident, comfortable, 
-              and seen.
-            </p>
-          </div>
-        </div>
-      </div>
-
+      <!-- RIGHT COLUMN (CARD with your image) -->
+<div class="col-12 col-md-6 mt-4 mt-md-0 d-flex justify-content-center">
+  <div class="card shadow" style="max-width: 380px; border-radius: 16px;">
+    <img 
+      src="kimberli_SavvyLensPhotos-21.jpg"
+      class="card-img-top"
+      alt="Savvy Lens Photography Sample"
+      style="border-radius: 16px; max-height: 430px; object-fit: cover;">
+    <div class="card-body">
+      <h5 class="card-title fw-bold">My Photography Business</h5>
+      <p class="card-text">
+        I specialize in lifestyle and family photography, capturing real and emotional 
+        moments that tell a story. My goal is to make people feel confident, comfortable, 
+        and seen.
+      </p>
     </div>
   </div>
+</div>
+
 
   <!-- HOBBIES SECTION -->
   <section id="hobbies" class="py-5">
@@ -164,8 +195,7 @@
             <div class="card-body">
               <h5 class="card-title fw-bold">Being a Mom</h5>
               <p class="card-text">
-                Motherhood is my biggest source of motivation. I love watching my son grow, learn, 
-                and explore the world.
+                Motherhood is my biggest source of motivation. I love watching my son grow.
               </p>
             </div>
           </div>
@@ -176,8 +206,7 @@
             <div class="card-body">
               <h5 class="card-title fw-bold">Reality TV</h5>
               <p class="card-text">
-                From Bravo to Netflix, I love reality TV. It’s my escape and sometimes my source of 
-                storytelling inspiration.
+                From Bravo to Netflix, I love reality TV. It’s my escape and storytelling inspo.
               </p>
             </div>
           </div>
@@ -188,7 +217,7 @@
             <div class="card-body">
               <h5 class="card-title fw-bold">Reading</h5>
               <p class="card-text">
-                I love books on self-growth, business, motherhood, and a good fiction story to unwind.
+                I love books on growth, motherhood, and a good fiction escape.
               </p>
             </div>
           </div>
@@ -206,8 +235,8 @@
       <div class="row justify-content-center">
         <div class="col-12 col-md-8">
           <p class="text-center fs-5">
-            My long-term goal is to work in digital marketing and event planning, where I can create 
-            meaningful, user-centered experiences that merge data, creativity, and storytelling.
+            My long-term goal is to work in digital marketing and event planning, creating meaningful 
+            user-centered experiences that merge data, creativity, and storytelling.
           </p>
         </div>
       </div>
