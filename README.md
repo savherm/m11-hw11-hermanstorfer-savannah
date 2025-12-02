@@ -43,3 +43,25 @@ Your site should be deployed to `<your github username>.github.io/<your reposito
 ## Submission
 
 Please submit both a link to your repository and a link to the live site. Also please include any comments on stumbling blocks or difficulties encountered while completing the assignment.
+
+# Bootstrap Personal Webpage – Assignment
+
+This project is a single-page personal site built using **Bootstrap 5**.  
+It introduces responsive layouts, components, and minimal styling.
+
+## Bootstrap Components Used
+- **Navbar** (mobile responsive with toggler)
+- **Cards** (used in About Me + Hobbies sections)
+- **Buttons** (Hero + Back to Top)
+- **Responsive Grid System** (col-12, col-md-6, row, container, g-4, etc.)
+- **Spacing Utilities** (my-5, py-5, mt-4, mb-3, g-4, etc.)
+
+## Content Included
+- About me (being a mom, loving reading and reality TV)
+- My photography business
+- Hobbies section using responsive grid + cards
+- Career goals section
+
+## Deployment
+This site is deployed with GitHub Pages:
+`https://<your-username>.github.io/m11-hw11-lastname-firstname`
